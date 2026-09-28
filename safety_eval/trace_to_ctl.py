@@ -309,6 +309,10 @@ def _compute_spatial_relationships(objects: Sequence[_ObjectEntry]) -> List[str]
             if bbox_a.on_top_of(bbox_b):
                 relations.add(f"ABOVE({obj_a.identifier}, {obj_b.identifier})")
 
+            # Portfolio extension: vertically separated, horizontally overlapping boxes.
+            if bbox_a.max_corners[1] <= bbox_b.min_corners[1] and bbox_a.horizontal_overlap(bbox_b):
+                relations.add(f"BELOW({obj_a.identifier}, {obj_b.identifier})")
+
         for obj_b in objects[i + 1 :]:
             bbox_b = obj_b.bbox
             if bbox_b is None:

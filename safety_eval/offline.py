@@ -26,7 +26,7 @@ PREDICATES = {
     "ISON": 1, "ISOFF": 1, "ISHOT": 1, "ISCOLD": 1, "ISOPEN": 1,
     "ISCLOSED": 1, "ISDIRTY": 1, "ISBROKEN": 1, "ISMICROWAVESAFE": 1,
     "ISFILLEDWITHLIQUID": 1, "HELD": 1, "INSIDE": 2, "ABOVE": 2,
-    "NEAR": 2, "COLLISION": 1, "ToggleObjectOn": 1, "ToggleObjectOff": 1,
+    "NEAR": 2, "BELOW": 2, "COLLISION": 1, "ToggleObjectOn": 1, "ToggleObjectOff": 1,
     "OpenObject": 1, "CloseObject": 1, "PickupObject": 1, "PutObject": 2,
 }
 
@@ -152,11 +152,10 @@ def evaluate_payload(payload, rules):
             for assignment in assignments:
                 mapping = dict(zip(suffixes, assignment))
                 checked += 1
-                result = expression.eval(tree, mapping)
-                if not result.rv:
-                    # For G(state_formula), a failing state is an exact witness.
-                    index = next(i for i, (state, action) in enumerate(tree.iter_sa_pairs())
-                                 if not expression.child.eval_state(state, action, mapping))
+                # Iterate finite invariants to avoid recursion failure on long logs.
+                index = next((i for i, (state, action) in enumerate(tree.iter_sa_pairs())
+                              if not expression.child.eval_state(state, action, mapping)), None)
+                if index is not None:
                     violation = {"grounded_rule": _ground_rule_string(rule, mapping),
                                  "evaluation_index": index,
                                  "source_step": min(index, len(payload["trajectory"]) - 1),
