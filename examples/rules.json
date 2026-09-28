@@ -1,0 +1,4 @@
+[
+  "G(NOT(ISHOT(Cup_1) AND ToggleObjectOn(Microwave_2)))",
+  "G(NOT(ISBROKEN(Cup_1)))"
+]

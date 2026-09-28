@@ -1,0 +1,78 @@
+{
+  "repository": "https://github.com/NU-IDEAS-Lab/SENTINEL_code",
+  "source": "local SENTINEL\u9879\u76ee.zip backup",
+  "archive_sha256": "abeb8b66bd90697699baa7a2e3e3748e5ea4453bea5df32b26b7494f17f8f976",
+  "commit": "unknown; archive has no verified commit",
+  "files": [
+    {
+      "path": "safety_eval/__init__.py",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "safety_eval/ctl.py",
+      "archive_sha256": "2b3f6058cdc59603304b842d47170ad799fdb779713c57d0507866a06a75fd6f",
+      "normalized_sha256": "2b3f6058cdc59603304b842d47170ad799fdb779713c57d0507866a06a75fd6f"
+    },
+    {
+      "path": "safety_eval/ctl_parser.py",
+      "archive_sha256": "7d179584c0a2c8d149ef2dcd14f8fdc363573e254b4288715ec3a73dea0e7649",
+      "normalized_sha256": "7d179584c0a2c8d149ef2dcd14f8fdc363573e254b4288715ec3a73dea0e7649"
+    },
+    {
+      "path": "safety_eval/ctl_full_pipeline.py",
+      "archive_sha256": "dc00bfe7d11f84d48d2f2c26eab45dee4d17fe1744209445d87a865d2870921a",
+      "normalized_sha256": "dc00bfe7d11f84d48d2f2c26eab45dee4d17fe1744209445d87a865d2870921a"
+    },
+    {
+      "path": "safety_eval/tree_traj.py",
+      "archive_sha256": "b8e555d220bac87e5ea0df4f3bec98a76c76976a1851e54f7b8397891b3d1725",
+      "normalized_sha256": "b8e555d220bac87e5ea0df4f3bec98a76c76976a1851e54f7b8397891b3d1725"
+    },
+    {
+      "path": "safety_eval/trace_to_ctl.py",
+      "archive_sha256": "5f24099c9e7915664c71b22d0010098bd99b5657202427c43ae75b62016c79f2",
+      "normalized_sha256": "5f24099c9e7915664c71b22d0010098bd99b5657202427c43ae75b62016c79f2"
+    },
+    {
+      "path": "safety_eval/collision.py",
+      "archive_sha256": "fa72eb2f94b58ecf75d18222919cb88dff531d74282ccb8d1c5486717762458f",
+      "normalized_sha256": "fa72eb2f94b58ecf75d18222919cb88dff531d74282ccb8d1c5486717762458f"
+    },
+    {
+      "path": "gen_safety/constants.py",
+      "archive_sha256": "eef0771d6e45f3a91e1f47e07c7d6fcedacbc1a073a07e18ecc040ee768b19fe",
+      "normalized_sha256": "eef0771d6e45f3a91e1f47e07c7d6fcedacbc1a073a07e18ecc040ee768b19fe"
+    },
+    {
+      "path": "LICENSE",
+      "archive_sha256": "ba71de2194913dbdf5bfd5dc612731428127af6a37a8cd644485dd45dd6df604",
+      "normalized_sha256": "ba71de2194913dbdf5bfd5dc612731428127af6a37a8cd644485dd45dd6df604"
+    },
+    {
+      "path": "safety_eval/treelib/__init__.py",
+      "archive_sha256": "82f379d311b962eb90e226600cdc8fe409322ece73bd520f42a484b0e59d8d45",
+      "normalized_sha256": "82f379d311b962eb90e226600cdc8fe409322ece73bd520f42a484b0e59d8d45"
+    },
+    {
+      "path": "safety_eval/treelib/tree.py",
+      "archive_sha256": "0295d341bed63ca607f66939f5eaccafd8e74fa2cb30ba0fee0c308ad878547f",
+      "normalized_sha256": "0295d341bed63ca607f66939f5eaccafd8e74fa2cb30ba0fee0c308ad878547f"
+    },
+    {
+      "path": "safety_eval/treelib/node.py",
+      "archive_sha256": "062f4cdabbebc4cf9b612466eb00de3d43cc8d7a388b557856a21ce168f0db96",
+      "normalized_sha256": "062f4cdabbebc4cf9b612466eb00de3d43cc8d7a388b557856a21ce168f0db96"
+    },
+    {
+      "path": "safety_eval/treelib/misc.py",
+      "archive_sha256": "c1af82f60881c1e16cd1aa2a1ecd2672a9a8246226fdee7ffbd237c5789c6724",
+      "normalized_sha256": "c1af82f60881c1e16cd1aa2a1ecd2672a9a8246226fdee7ffbd237c5789c6724"
+    },
+    {
+      "path": "safety_eval/treelib/exceptions.py",
+      "archive_sha256": "57e9954f9c6c51f03157145c677dabbf6d24c41caa535dfb6cb0a147442a7ee1",
+      "normalized_sha256": "57e9954f9c6c51f03157145c677dabbf6d24c41caa535dfb6cb0a147442a7ee1"
+    }
+  ]
+}

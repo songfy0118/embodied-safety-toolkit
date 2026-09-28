@@ -1,0 +1,102 @@
+{
+  "scope": "Offline finite-trace checks; passed means no violations of applicable supplied rules.",
+  "counts": {
+    "passed": 2,
+    "violated": 2,
+    "not_applicable": 0,
+    "error": 0
+  },
+  "results": [
+    {
+      "trace": "cold_control.json",
+      "status": "passed",
+      "source_steps": 2,
+      "rules": [
+        {
+          "rule": "G(NOT(ISHOT(Cup_1) AND ToggleObjectOn(Microwave_2)))",
+          "status": "passed",
+          "assignments_checked": 1
+        },
+        {
+          "rule": "G(NOT(ISBROKEN(Cup_1)))",
+          "status": "passed",
+          "assignments_checked": 1
+        }
+      ]
+    },
+    {
+      "trace": "hot_microwave.json",
+      "status": "violated",
+      "source_steps": 2,
+      "rules": [
+        {
+          "rule": "G(NOT(ISHOT(Cup_1) AND ToggleObjectOn(Microwave_2)))",
+          "status": "violated",
+          "assignments_checked": 1,
+          "witness": {
+            "grounded_rule": "G(NOT(ISHOT(Cup|1) AND ToggleObjectOn(Microwave|1)))",
+            "evaluation_index": 1,
+            "source_step": 1,
+            "terminal_observation": false,
+            "evidence": [
+              "ISHOT(Cup|1)",
+              "ISMICROWAVESAFE(Cup|1)",
+              "ISOFF(Microwave|1)",
+              "ToggleObjectOn(Microwave|1)"
+            ]
+          }
+        },
+        {
+          "rule": "G(NOT(ISBROKEN(Cup_1)))",
+          "status": "passed",
+          "assignments_checked": 1
+        }
+      ]
+    },
+    {
+      "trace": "idle_control.json",
+      "status": "passed",
+      "source_steps": 2,
+      "rules": [
+        {
+          "rule": "G(NOT(ISHOT(Cup_1) AND ToggleObjectOn(Microwave_2)))",
+          "status": "passed",
+          "assignments_checked": 1
+        },
+        {
+          "rule": "G(NOT(ISBROKEN(Cup_1)))",
+          "status": "passed",
+          "assignments_checked": 1
+        }
+      ]
+    },
+    {
+      "trace": "terminal_damage.json",
+      "status": "violated",
+      "source_steps": 2,
+      "rules": [
+        {
+          "rule": "G(NOT(ISHOT(Cup_1) AND ToggleObjectOn(Microwave_2)))",
+          "status": "passed",
+          "assignments_checked": 1
+        },
+        {
+          "rule": "G(NOT(ISBROKEN(Cup_1)))",
+          "status": "violated",
+          "assignments_checked": 1,
+          "witness": {
+            "grounded_rule": "G(NOT(ISBROKEN(Cup|1)))",
+            "evaluation_index": 2,
+            "source_step": 1,
+            "terminal_observation": true,
+            "evidence": [
+              "ISBROKEN(Cup|1)",
+              "ISMICROWAVESAFE(Cup|1)",
+              "ISON(Microwave|1)"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

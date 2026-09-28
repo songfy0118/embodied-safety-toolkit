@@ -1,0 +1,58 @@
+{
+  "fixture_kind": "synthetic; not a recorded simulator experiment",
+  "trajectory": [
+    {
+      "plan_action": {
+        "action": "Pass"
+      },
+      "event_metadata": {
+        "objects": [
+          {
+            "objectId": "Microwave|1",
+            "objectType": "Microwave",
+            "toggleable": true,
+            "isToggled": false
+          },
+          {
+            "objectId": "Cup|1",
+            "objectType": "Cup",
+            "temperature": "RoomTemp",
+            "breakable": true,
+            "isBroken": false,
+            "salientMaterials": [
+              "Ceramic"
+            ]
+          }
+        ],
+        "errorMessage": null
+      }
+    },
+    {
+      "plan_action": {
+        "action": "ToggleObjectOn",
+        "objectId": "Microwave|1"
+      },
+      "event_metadata": {
+        "objects": [
+          {
+            "objectId": "Microwave|1",
+            "objectType": "Microwave",
+            "toggleable": true,
+            "isToggled": true
+          },
+          {
+            "objectId": "Cup|1",
+            "objectType": "Cup",
+            "temperature": "RoomTemp",
+            "breakable": true,
+            "isBroken": false,
+            "salientMaterials": [
+              "Ceramic"
+            ]
+          }
+        ],
+        "errorMessage": null
+      }
+    }
+  ]
+}
